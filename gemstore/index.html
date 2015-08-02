@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="gemStore">
+<head>
+	<meta charset="UTF-8">
+	<title>CodeSchool_Angularjs_Tutorial</title>
+
+	<!-- Include style library -->
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	
+  <!-- Include core angularjs library -->
+  <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body ng-controller="StoreController as store">
+  <!--  Store Header  -->
+  <header>
+    <h1 class="text-center">Flatlander Crafted Gems</h1>
+    <h2 class="text-center">– an Angular store –</h2>
+  </header>
+
+  <!--  Products Container  -->
+  <div class="list-group container">
+    <!--  Product Container  -->
+    <div class="list-group-item" ng-repeat="product in store.products">
+      <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+
+      <!-- Image Gallery  -->
+      <product-gallery></product-gallery>
+
+      <!-- Product Tabs  -->
+      <product-tabs></product-tabs>
+    </div>
+
+  </div>
+
+  <!-- Modules -->
+  <script type="text/javascript" src="assets/js/app.js"></script>
+
+  <!-- Directives -->
+  <script type="text/javascript" src="assets/js/directives/products.js"></script>
+
+  <!-- Controllers -->
+  <script type="text/javascript" src="assets/js/controllers/StoreController.js"></script>
+  <script type="text/javascript" src="assets/js/controllers/ReviewController.js"></script>
+</body>
+</html>
