@@ -3,7 +3,7 @@
 <head>
 	<title>Codecademy_AngularJS</title>
 	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,500,300">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400, 500, 300">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 	<!-- Include core AngularJS library -->
@@ -12,7 +12,25 @@
 	<!-- Include AngularJS routing library -->
 	<script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
 </head>
-<body>
+<body ng-app="GallaryApp">
+	<div class="header">
+		<div class="container">
+			<a href="/gallery/#/">
+				<img src="img/logo.svg" width="80" height="80" /> skyfly33 Gallery
+			</a>
+		</div>
+	</div>
 
+	<div ng-view></div>
+
+	<!-- Modules -->
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<!-- Controllers -->
+	<script type="text/javascript" src="js/controllers/HomeController.js"></script>
+	<script type="text/javascript" src="js/controllers/PhotoController.js"></script>
+
+	<!-- Services -->
+	<script type="text/javascript" src="js/services/photos.js"></script>
 </body>
 </html>
